@@ -4,7 +4,7 @@ import { Github, Linkedin, Download } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="home" className="w-full flex flex-col md:flex-row items-center justify-between gap-12 pt-12 md:pt-24">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -33,25 +33,32 @@ export default function Hero() {
           </a>
         </div>
       </motion.div>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="md:w-2/5 flex flex-col items-center relative"
+        className="md:w-2/5 flex flex-col items-center relative -mt-12 md:-mt-32"
       >
-        <div className="relative w-full max-w-sm aspect-square border-b border-[#c778dd] flex items-end justify-center">
+        <div className="relative w-full max-w-[450px] aspect-square border-b border-[#c778dd] flex items-end justify-center">
           {/* Abstract geometric shape for hero image placeholder */}
-          <svg viewBox="0 0 200 200" className="w-full h-full text-[#c778dd] opacity-80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 200 200" className="absolute w-[110%] h-[110%] -bottom-4 text-[#c778dd] opacity-80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M100 20 L180 180 L20 180 Z" stroke="currentColor" strokeWidth="2" />
             <circle cx="100" cy="120" r="40" stroke="currentColor" strokeWidth="2" />
             <rect x="80" y="40" width="40" height="40" stroke="currentColor" strokeWidth="2" />
           </svg>
-          
+
+          {/* Profile Image Overlay */}
+          <img
+            src="/my-photo.png"
+            alt="Kaushik Gupta"
+            className="absolute z-10 w-full h-full object-contain object-bottom"
+          />
+
           {/* Decorative dots */}
           <svg className="absolute top-10 left-0 w-16 h-16 text-[#abb2bf]" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {[0, 20, 40, 60, 80].map(x => 
-              [0, 20, 40, 60, 80].map(y => 
-                <circle key={`${x}-${y}`} cx={x+2} cy={y+2} r="2" fill="currentColor" />
+            {[0, 20, 40, 60, 80].map(x =>
+              [0, 20, 40, 60, 80].map(y =>
+                <circle key={`${x}-${y}`} cx={x + 2} cy={y + 2} r="2" fill="currentColor" />
               )
             )}
           </svg>
