@@ -8,7 +8,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col gap-6 md:w-3/5"
+        className="flex flex-col gap-6 md:w-1/2"
       >
         <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
           Kaushik Gupta is a <span className="text-[#c778dd]">Computer Science Student</span> and <span className="text-[#c778dd]">AI & Machine Learning Enthusiast</span>
@@ -37,9 +37,9 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="md:w-2/5 flex flex-col items-center relative -mt-12 md:-mt-32"
+        className="md:w-1/2 flex flex-col items-center relative -mt-12 md:-mt-32"
       >
-        <div className="relative w-full max-w-[450px] aspect-square border-b border-[#c778dd] flex items-end justify-center">
+        <div className="relative w-full max-w-[550px] aspect-square border-b border-[#c778dd] flex items-end justify-center">
           {/* Abstract geometric shape for hero image placeholder */}
           <svg viewBox="0 0 200 200" className="absolute w-[110%] h-[110%] -bottom-4 text-[#c778dd] opacity-80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M100 20 L180 180 L20 180 Z" stroke="currentColor" strokeWidth="2" />
