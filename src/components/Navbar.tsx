@@ -9,13 +9,10 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 px-4 flex flex-col justify-center items-center md:px-8 bg-[#282c33]">
       <div className="w-full max-w-[1024px] pt-8 pb-2 flex items-center justify-between gap-4">
         <Link to="/" className="text-base font-bold flex items-center gap-2 text-white">
-          <svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-            <rect width="32" height="32" fill="none" stroke="#c778dd" strokeWidth="2" />
-            <path d="M10 10 L22 22 M22 10 L10 22" stroke="#c778dd" strokeWidth="2" />
-          </svg>
+          <img src="/Logo.png" alt="Logo" className="w-[30px] h-auto object-contain" />
           Kaushik
         </Link>
-        
+
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8">
             {['home', 'projects', 'skills', 'achievements', 'contact'].map((item) => (
@@ -28,7 +25,7 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <button 
+        <button
           className="md:hidden text-[#abb2bf]"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -42,8 +39,8 @@ export default function Navbar() {
           <ul className="flex flex-col items-center gap-4">
             {['home', 'projects', 'skills', 'achievements', 'contact'].map((item) => (
               <li key={item} className="w-full text-center">
-                <a 
-                  href={`/#${item}`} 
+                <a
+                  href={`/#${item}`}
                   className="block w-full py-2 text-[#abb2bf] hover:text-white transition-colors"
                   onClick={() => setIsOpen(false)}
                 >

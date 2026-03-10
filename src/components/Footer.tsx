@@ -7,10 +7,7 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-4">
             <span className="text-white font-bold text-xl flex items-center gap-2">
-              <svg viewBox="0 0 32 32" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <rect width="32" height="32" fill="none" stroke="#c778dd" strokeWidth="2" />
-                <path d="M10 10 L22 22 M22 10 L10 22" stroke="#c778dd" strokeWidth="2" />
-              </svg>
+              <img src="/Logo.png" alt="Logo" className="w-[30px] h-auto object-contain" />
               Kaushik
             </span>
             <a href="mailto:manchikanti.kaushikgupta@gmail.com" className="text-[#abb2bf] hover:text-white transition-colors">
@@ -19,7 +16,7 @@ export default function Footer() {
           </div>
           <p className="text-[#abb2bf]">Computer Science Student | AI & Machine Learning Enthusiast</p>
         </div>
-        
+
         <div className="flex flex-col gap-4">
           <h3 className="text-white font-bold text-xl">Media</h3>
           <div className="flex gap-4">
@@ -32,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      
+
       <div className="text-center w-full text-[#abb2bf]">
         © 2026 Kaushik Gupta. Built with React and TailwindCSS.
       </div>
