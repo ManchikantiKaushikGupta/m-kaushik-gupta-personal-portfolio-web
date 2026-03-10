@@ -1,4 +1,18 @@
-export const projects = [
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  techStack: string[];
+  github: string;
+  featured: boolean;
+  overview: string;
+  problem: string;
+  solution: string;
+  features: string[];
+  video?: string;
+}
+
+export const projects: Project[] = [
   {
     id: 'solvic',
     title: 'Solvic',
@@ -22,6 +36,7 @@ export const projects = [
     title: 'JoyVerse',
     description: 'Emotion-aware educational gaming system designed for dyslexic children that detects facial expressions during gameplay and dynamically adjusts difficulty levels.',
     techStack: ['Python', 'PyTorch', 'MediaPipe', 'MongoDB'],
+    video: '/Joyverse Screen Recording.mp4',
     github: 'https://github.com/ManchikantiKaushikGupta',
     featured: false,
     overview: 'JoyVerse is an emotion-aware educational gaming system designed for dyslexic children.',
@@ -39,6 +54,7 @@ export const projects = [
     title: 'Novic',
     description: 'Full-stack MERN donation platform built for Novic Foundation to support affordable AI-powered prosthetic limbs.',
     techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Google Sheets API'],
+    video: '/Novic Screen Recording.mp4',
     github: 'https://github.com/ManchikantiKaushikGupta',
     featured: false,
     overview: 'Novic is a full-stack MERN donation platform built for the Novic Foundation.',

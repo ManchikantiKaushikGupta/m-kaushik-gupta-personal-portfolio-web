@@ -18,7 +18,7 @@ export default function ProjectDetails() {
   }
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -35,8 +35,22 @@ export default function ProjectDetails() {
       </div>
 
       <div className="w-full aspect-video border border-[#abb2bf] bg-[#282c33] flex items-center justify-center overflow-hidden relative">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#abb2bf 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
-        <span className="text-[#abb2bf] font-mono text-3xl z-10">{project.title} Preview</span>
+        {project.video ? (
+          <video
+            src={project.video}
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+          />
+        ) : (
+          <>
+            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#abb2bf 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
+            <span className="text-[#abb2bf] font-mono text-3xl z-10">{project.title} Preview</span>
+          </>
+        )}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -45,7 +59,7 @@ export default function ProjectDetails() {
             <SectionHeader title="overview" />
             <p className="text-[#abb2bf] leading-relaxed">{project.overview}</p>
           </section>
-          
+
           <section>
             <SectionHeader title="problem-statement" />
             <p className="text-[#abb2bf] leading-relaxed">{project.problem}</p>

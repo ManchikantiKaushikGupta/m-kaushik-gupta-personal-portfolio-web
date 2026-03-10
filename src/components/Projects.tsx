@@ -9,7 +9,7 @@ export default function Projects() {
       <SectionHeader title="projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project, index) => (
-          <motion.div 
+          <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -18,9 +18,22 @@ export default function Projects() {
             className="border border-[#abb2bf] flex flex-col h-full hover:border-[#c778dd] transition-colors"
           >
             <div className="w-full aspect-video border-b border-[#abb2bf] bg-[#282c33] flex items-center justify-center overflow-hidden relative">
-              {/* Placeholder image pattern */}
-              <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#abb2bf 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
-              <span className="text-[#abb2bf] font-mono text-xl z-10">{project.title}</span>
+              {project.video ? (
+                <video
+                  src={project.video}
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              ) : (
+                <>
+                  {/* Placeholder image pattern */}
+                  <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#abb2bf 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
+                  <span className="text-[#abb2bf] font-mono text-xl z-10">{project.title}</span>
+                </>
+              )}
             </div>
             <div className="p-2 border-b border-[#abb2bf] flex flex-wrap gap-2 text-[#abb2bf] text-sm font-mono">
               {project.techStack.join(' ')}
