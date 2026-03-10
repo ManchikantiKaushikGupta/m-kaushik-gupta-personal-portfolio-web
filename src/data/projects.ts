@@ -73,6 +73,7 @@ export const projects: Project[] = [
     title: 'COVID-19 Classification using Chest X-ray Images',
     description: 'Deep learning model that classifies chest X-ray images to detect COVID-19 using convolutional neural networks.',
     techStack: ['Python', 'CNN', 'Deep Learning', 'Image Processing'],
+    video: '/Covid detection screen recording.mp4',
     github: 'https://github.com/ManchikantiKaushikGupta',
     featured: false,
     overview: 'A deep learning model for classifying chest X-ray images to detect COVID-19.',
